@@ -1,0 +1,34 @@
+.masonry-list {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  overflow-x: clip;
+}
+
+.masonry-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px;
+  cursor: pointer;
+  will-change: transform, width, height, opacity;
+}
+
+.masonry-item__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.2);
+}
+
+.masonry-glow,
+.masonry-glow .border-glow-inner {
+  height: 100%;
+  min-height: 0;
+}
+
+.masonry-glow .border-glow-inner {
+  overflow: hidden;
+}
