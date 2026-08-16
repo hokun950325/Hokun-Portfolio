@@ -78,6 +78,8 @@ export default function LiveRoomShowcase({
         <img
           src={item.src}
           alt={item.label}
+          loading="lazy"
+          decoding="async"
           className="live-thumb__image pointer-events-none absolute inset-0 h-full w-full object-cover"
         />
       )}
@@ -105,6 +107,7 @@ export default function LiveRoomShowcase({
               autoPlay
               muted
               loop
+              preload="metadata"
               playsInline
               className="live-main__video absolute inset-0 h-full w-full object-cover"
             />
@@ -112,6 +115,8 @@ export default function LiveRoomShowcase({
             <img
               src={items[activeIndex].src}
               alt={items[activeIndex].label}
+              loading="lazy"
+              decoding="async"
               className="live-main__image absolute inset-0 h-full w-full object-cover object-top"
             />
           )}

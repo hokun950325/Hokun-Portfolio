@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { projects, type Project } from "../data/portfolio";
+import { detailCardThumbImages, projects, type Project } from "../data/portfolio";
 import AIGCShowcase from "./AIGCShowcase";
 import AmbassadorShowcase from "./AmbassadorShowcase";
 import BorderGlow from "./BorderGlow";
@@ -49,6 +49,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
   const detailItems = project.detailLabels
     ? project.detailLabels.map((label, index) => ({
         src: project.images[index % project.images.length],
+        thumb: detailCardThumbImages[index % detailCardThumbImages.length],
         label,
       }))
     : project.images.map((src, index) => ({
@@ -126,6 +127,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                           src={item.src}
                           autoPlay
                           muted
+                          preload="metadata"
                           playsInline
                           onEnded={() =>
                             setActiveVideo((activeVideo + 1) % dynamicVideos.length)

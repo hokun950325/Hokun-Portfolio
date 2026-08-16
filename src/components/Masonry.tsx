@@ -128,7 +128,24 @@ export default function Masonry({
   };
 
   useEffect(() => {
-    preloadImages(items.map((item) => item.img)).then(() => setImagesReady(true));
+    const container = containerRef.current;
+    if (!container) return;
+    let disposed = false;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        observer.disconnect();
+        preloadImages(items.map((item) => item.img)).then(() => {
+          if (!disposed) setImagesReady(true);
+        });
+      },
+      { rootMargin: "600px" },
+    );
+    observer.observe(container);
+    return () => {
+      disposed = true;
+      observer.disconnect();
+    };
   }, [items]);
 
   const grid = useMemo(() => {
@@ -242,6 +259,7 @@ export default function Masonry({
             src={item.img}
             alt={`静态海报 ${item.id}`}
             draggable={false}
+            decoding="async"
             className="masonry-item__image border border-white/10 bg-[#0C0C0C]"
           />
         </div>

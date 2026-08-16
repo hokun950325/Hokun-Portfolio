@@ -50,6 +50,8 @@ export default function AmbassadorShowcase() {
                   <img
                     src="/images/ambassador/ambassador-banner.webp"
                     alt="袋鼠妈妈青少年洗护全渠道banner"
+                    loading="lazy"
+                    decoding="async"
                     className="ambassador-ext__image min-h-0 w-full flex-1 object-cover object-top"
                   />
                 </div>
@@ -60,6 +62,8 @@ export default function AmbassadorShowcase() {
                       <img
                         src="/images/ambassador/ambassador-main-template.webp"
                         alt="袋鼠妈妈青春洗护套组"
+                        loading="lazy"
+                        decoding="async"
                         className="ambassador-ext__image absolute inset-0 h-full w-full object-cover"
                       />
                     </div>
@@ -67,6 +71,8 @@ export default function AmbassadorShowcase() {
                       <img
                         src="/images/ambassador/ambassador-cover-1.webp"
                         alt="TOP登陆少年组合强势官宣"
+                        loading="lazy"
+                        decoding="async"
                         className="ambassador-ext__image absolute inset-0 h-full w-full object-cover"
                       />
                     </div>
@@ -75,6 +81,8 @@ export default function AmbassadorShowcase() {
                     <img
                       src="/images/ambassador/ambassador-cover-2.webp"
                       alt="清爽控油屑洗出蓬松发丝"
+                      loading="lazy"
+                      decoding="async"
                       className="ambassador-ext__image absolute inset-0 h-full w-full object-cover"
                     />
                   </div>
@@ -95,6 +103,8 @@ export default function AmbassadorShowcase() {
             <img
               src="/images/ambassador/ambassador-live.webp?v=2"
               alt="袋鼠妈妈青少年洗护系列全球代言人"
+              loading="lazy"
+              decoding="async"
               className="ambassador-live__image absolute inset-0 h-full w-full object-cover object-top"
             />
           </div>

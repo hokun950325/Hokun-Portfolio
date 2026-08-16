@@ -223,9 +223,11 @@ export default function Grainient({
 
     const setSize = () => {
       const rect = container.getBoundingClientRect();
-      const w = Math.max(1, Math.floor(rect.width));
-      const h = Math.max(1, Math.floor(rect.height));
+      const w = Math.max(1, Math.floor(Math.min(rect.width, 1280)));
+      const h = Math.max(1, Math.floor(Math.min(rect.height, 720)));
       renderer.setSize(w, h);
+      canvas.style.width = "100%";
+      canvas.style.height = "100%";
       const res = program.uniforms.iResolution.value;
       res[0] = gl.drawingBufferWidth;
       res[1] = gl.drawingBufferHeight;

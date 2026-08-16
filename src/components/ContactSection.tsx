@@ -86,6 +86,8 @@ export default function ContactSection() {
               <img
                 src="/images/contact-qr.png"
                 alt="微信二维码"
+                loading="lazy"
+                decoding="async"
                 className="contact-qr__image aspect-square w-full rounded-2xl bg-white object-contain p-2"
               />
             </BorderGlow>

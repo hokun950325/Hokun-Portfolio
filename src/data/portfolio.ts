@@ -95,12 +95,22 @@ const detailProjectImages = Array.from(
   (_, index) => `/images/detail/detail-${String(index + 1).padStart(2, "0")}.jpg`,
 );
 
+export const detailThumbImages = Array.from(
+  { length: 8 },
+  (_, index) => `/images/detail/detail-thumb-${String(index + 1).padStart(2, "0")}.webp`,
+);
+
+export const detailCardThumbImages = Array.from(
+  { length: 8 },
+  (_, index) => `/images/detail/detail-card-thumb-${String(index + 1).padStart(2, "0")}.webp`,
+);
+
 const marqueeImagePool = [
   ...pageMainStaticImages,
   "/images/live/live-room-01.webp",
   "/images/live/live-room-02.webp",
   "/images/live/live-room-03.webp",
-  ...detailProjectImages,
+  ...detailThumbImages,
   ...mainProjectImages,
 ];
 

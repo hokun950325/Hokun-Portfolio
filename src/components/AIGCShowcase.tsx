@@ -22,14 +22,18 @@ export default function AIGCShowcase() {
             <img
               src="/images/aigc/aigc-01.jpg"
               alt="AIGC九宫格分镜"
+              loading="lazy"
+              decoding="async"
               className="aigc-media__image absolute inset-0 h-full w-full object-cover"
             />
           </div>
 
           <div className="aigc-media-card relative aspect-[1152/2048] min-h-0 overflow-hidden rounded-2xl border border-white/10 bg-[#0C0C0C] lg:aspect-auto lg:h-full">
             <img
-              src="/images/aigc/aigc-02.jpg"
+              src="/images/aigc/aigc-02.webp"
               alt="AIGC产品精修白底图"
+              loading="lazy"
+              decoding="async"
               className="aigc-media__image absolute inset-0 h-full w-full object-cover"
             />
           </div>

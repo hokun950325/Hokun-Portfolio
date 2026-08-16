@@ -2,7 +2,7 @@ import { useState } from "react";
 import BorderGlow from "./BorderGlow";
 
 type DetailPageShowcaseProps = {
-  items: { src: string; label: string }[];
+  items: { src: string; label: string; thumb?: string }[];
 };
 
 export default function DetailPageShowcase({ items }: DetailPageShowcaseProps) {
@@ -22,6 +22,8 @@ export default function DetailPageShowcase({ items }: DetailPageShowcaseProps) {
           <img
             src={items[activeIndex].src}
             alt={items[activeIndex].label}
+            loading="lazy"
+            decoding="async"
             className="detail-main__image absolute inset-0 h-full w-full object-cover object-top"
           />
           <span className="absolute left-3 top-3 rounded-full bg-black/60 px-3 py-1 text-xs text-white">
@@ -43,8 +45,10 @@ export default function DetailPageShowcase({ items }: DetailPageShowcaseProps) {
             }`}
           >
             <img
-              src={item.src}
+              src={item.thumb ?? item.src}
               alt={item.label}
+              loading="lazy"
+              decoding="async"
               className="detail-thumb__image pointer-events-none absolute inset-0 h-full w-full object-cover"
             />
             <span className="absolute left-2 top-2 rounded-full bg-black/60 px-2 py-0.5 text-[0.6rem] uppercase tracking-widest text-white">
