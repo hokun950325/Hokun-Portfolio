@@ -42,6 +42,7 @@ export default function AIGCShowcase() {
               muted
               loop
               playsInline
+              preload="metadata"
               className="aigc-media__video absolute inset-0 h-full w-full object-cover"
             />
         </div>
